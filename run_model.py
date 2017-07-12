@@ -50,8 +50,11 @@ def run_model(data_file, model_file, label_col_index=-1):
     #Load data
     X, y = load_data(data_file, label_col_index=label_col_index)
     #Load model
-    clf = load_model(model_file)
-    print y
+    try:
+        clf = load_model(model_file)
+    except:
+        print "Error loading model file"
+        print "Did you unzip 'final_model.zip'?"
     #Make predictions
     predictions = clf.predict(X)
     #Calculate score
