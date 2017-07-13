@@ -27,7 +27,7 @@ def get_column_names(file_name, first_col_is_label=True):
 def convert_label_to_numeric(df):
     '''(DataFrame) -> DataFrame
     
-    Will convert the label column 'Is_ad' into numeric
+    Will convert the label column 'is_ad' into numeric
     values. 1 representing an ad, 0 representing non-ad.
     '''
     df['is_ad'] = np.where(df['is_ad']=='ad.', 1, 0)  

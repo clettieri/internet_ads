@@ -41,7 +41,7 @@ def run_model(data_file, model_file, label_col_index=-1):
     '''(string, string, int) -> None
     
     Given a path to a data file in the same form as test data set,
-    and to a joblib file containing the final model, tis function will
+    and to a joblib file containing the final model, this function will
     load the data and then run the model and score it.
     
     This function assumes that the labels will be included with the data
